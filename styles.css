@@ -1,0 +1,307 @@
+:root {
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --primary: #2563eb;
+  --footer: #111827;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+header {
+  padding: 48px 0 22px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.title {
+  letter-spacing: .08em;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 0 22px;
+  text-transform: uppercase;
+}
+
+.hero-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, .25);
+  margin-bottom: 12px;
+}
+
+.hero-icon svg {
+  width: 34px;
+  height: 34px;
+  fill: #fff;
+}
+
+main {
+  padding: 34px 0 80px;
+}
+
+section {
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+h2 {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.field {
+  padding: 10px 10px 12px;
+  border-radius: 10px;
+}
+
+.label {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  word-break: break-word;
+}
+
+.center-list {
+  text-align: center;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.center-list.muted {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.pill {
+  display: inline-block;
+  margin: 6px 0 0;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  background: #fafafa;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--footer);
+  color: #fff;
+  padding: 14px 0;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-weight: 700;
+}
+
+.footer-row a {
+  color: #fff;
+  text-decoration: none;
+  opacity: .95;
+  transition: opacity 0.2s ease;
+}
+
+.footer-row a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon svg {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+  opacity: .9;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .wrap {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  header {
+    padding: 36px 0 18px;
+  }
+  
+  .title {
+    font-size: 18px;
+  }
+  
+  .hero-icon {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .hero-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  h2 {
+    font-size: 16px;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  
+  .field {
+    padding: 12px;
+  }
+  
+  .label {
+    font-size: 11px;
+  }
+  
+  .value {
+    font-size: 13px;
+  }
+  
+  main {
+    padding: 24px 0 110px;
+  }
+  
+  section {
+    padding: 20px 0;
+  }
+  
+  .footer-row {
+    flex-direction: column;
+    gap: 12px;
+    font-size: 14px;
+  }
+  
+  .wrap {
+    padding: 0 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 28px 0 16px;
+  }
+  
+  .title {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .hero-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  h2 {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  
+  main {
+    padding: 20px 0 120px;
+  }
+  
+  section {
+    padding: 18px 0;
+  }
+  
+  .field {
+    padding: 10px;
+  }
+  
+  .pill {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  
+  footer {
+    padding: 12px 0;
+  }
+  
+  .footer-row {
+    font-size: 13px;
+    gap: 10px;
+  }
+  
+  .icon svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .wrap {
+    padding: 0 12px;
+  }
+}
